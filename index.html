@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Area</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2f3, #8e9eab);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculate Kvadraten Metr</h1>
+        <form id="areaForm">
+            <label for="duljina">Дължина:</label>
+            <input type="number" id="duljina" name="duljina" required>
+
+            <label for="shirina">Ширина:</label>
+            <input type="number" id="shirina" name="shirina" required>
+
+            <button type="submit">Изчисли</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('areaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const duljina = parseFloat(document.getElementById('duljina').value);
+            const shirina = parseFloat(document.getElementById('shirina').value);
+
+            if (isNaN(duljina) || isNaN(shirina)) {
+                alert('Моля, въведете валидни числа!');
+                return;
+            }
+
+            const kvadratenm = duljina * shirina;
+            document.getElementById('result').textContent = `Резултат: ${kvadratenm} кв.м`;
+
+            alert('Congratz u are a pediras maznaaa!');
+        });
+    </script>
+</body>
+</html>
