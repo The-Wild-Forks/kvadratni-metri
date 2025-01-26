@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #eef2f3, #8e9eab);
+            background: linear-gradient(blue, yellow, pink);
             color: #333;
             text-align: center;
             padding: 20px;
@@ -15,7 +15,6 @@
         .container {
             max-width: 500px;
             margin: 50px auto;
-            background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             padding: 20px;
@@ -28,7 +27,7 @@
             border-radius: 5px;
         }
         button {
-            background: #28a745;
+            background: peach;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -49,13 +48,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Calculate Kvadraten Metr</h1>
+         <h1>Calculate Kvadraten Metar na Golqmata mi Pishka Beibi</h1>
         <form id="areaForm">
             <label for="duljina">Дължина:</label>
-            <input type="number" id="duljina" name="duljina" required>
+            <input type="number" min="0" step="0.01" id="duljina" name="duljina" required>
 
             <label for="shirina">Ширина:</label>
-            <input type="number" id="shirina" name="shirina" required>
+            <input type="number" min="0" step="0.01"  id="shirina" name="shirina" required>
 
             <button type="submit">Изчисли</button>
         </form>
